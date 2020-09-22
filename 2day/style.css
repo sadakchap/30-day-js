@@ -1,0 +1,94 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background: #1e192d;
+}
+
+.clock {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  background-color: #1e192d;
+  border-radius: 50%;
+  border: 5px solid #1e192d;
+  background: url("./clock.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 0 -10px 10px rgba(255, 255, 255, 0.05), inset 0 -10px 10px rgba(255, 255, 255, 0.05), 0 10px 10px rgba(0, 0, 0, 0.03), inset 0 -10px 10px rgba(0, 0, 0, 0.03);
+          box-shadow: 0 -10px 10px rgba(255, 255, 255, 0.05), inset 0 -10px 10px rgba(255, 255, 255, 0.05), 0 10px 10px rgba(0, 0, 0, 0.03), inset 0 -10px 10px rgba(0, 0, 0, 0.03);
+}
+
+.clock .hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  width: 50%;
+  height: 4px;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.clock::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+          box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  z-index: 10;
+}
+
+.clock .hand.hour {
+  width: 20%;
+  height: 5px;
+  background-color: #4d49b5;
+  border-radius: 0 6px 5px 0;
+}
+
+.clock .hand.minute {
+  width: 30%;
+  height: 2px;
+  background-color: #f3f3f3;
+}
+
+.clock .hand.second {
+  width: 50%;
+  height: 1px;
+}
+
+.clock .hand.second::before {
+  content: '';
+  position: absolute;
+  background-color: #dd06a0;
+  height: 100%;
+  width: 100%;
+  -webkit-transform: translateX(-26%);
+          transform: translateX(-26%);
+}
+/*# sourceMappingURL=style.css.map */

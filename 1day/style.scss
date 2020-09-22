@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("https://images.pexels.com/photos/1120162/pexels-photo-1120162.jpeg?cs=srgb&dl=pexels-annam-w-1120162.jpg&fm=jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.key{
+    margin: 1em .5em;
+    padding: .5em 1em;
+    border: 2px solid #161414c7;
+    box-shadow: 0 0 5px #161414c7;
+    background: rgba(0,0,0,.6);
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.5rem;
+    transition: all .07s;
+
+    & span.sound-name {
+        display: block;
+        font-size: .5rem;
+        text-transform: uppercase;
+        color: #f3f34f;
+        margin: 0 auto;
+    }
+}
+.playing{
+    transform: scale(1.1);
+    border: 2px solid #f3f34f;
+    box-shadow: 0 0 10px #f3f34f;
+}

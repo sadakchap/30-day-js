@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box1;
+          box-sizing: border-box1;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: url("https://images.pexels.com/photos/1120162/pexels-photo-1120162.jpeg?cs=srgb&dl=pexels-annam-w-1120162.jpg&fm=jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.key {
+  margin: 1em .5em;
+  padding: .5em 1em;
+  border: 2px solid #161414c7;
+  -webkit-box-shadow: 0 0 5px #161414c7;
+          box-shadow: 0 0 5px #161414c7;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.5rem;
+  -webkit-transition: all .07s;
+  transition: all .07s;
+}
+
+.key span.sound-name {
+  display: block;
+  font-size: .5rem;
+  text-transform: uppercase;
+  color: #f3f34f;
+  margin: 0 auto;
+}
+
+.playing {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  border: 2px solid #f3f34f;
+  -webkit-box-shadow: 0 0 10px #f3f34f;
+          box-shadow: 0 0 10px #f3f34f;
+}
+/*# sourceMappingURL=style.css.map */
