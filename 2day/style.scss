@@ -1,6 +1,11 @@
-
+:root{
+    --primary: #1e1926;
+    --secondary: #dd06a0;
+    --comp: #4d49b5;
+    --offLight: #f3f3f3;
+}
 *,
-*::after,
+*::after, 
 *::before{
     margin: 0;
     padding: 0;
@@ -11,69 +16,66 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #1e192d;
+    background-color: var(--primary);
 }
 .clock{
     position: relative;
     width: 350px;
     height: 350px;
-    background-color: #1e192d;
+    border: 5px solid var(--primary);
     border-radius: 50%;
-    border: 5px solid #1e192d;
-    background: url('./clock.png');
+    background: url(./clock.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    box-shadow:  0 -10px 10px rgba(255, 255, 255, .05),
+    box-shadow: 0 -10px 10px rgba(255, 255, 255, .05),
                 inset 0 -10px 10px rgba(255, 255, 255, .05),
-                 0 10px 10px rgba(0, 0, 0, .03),
-                inset 0 -10px 10px rgba(0, 0, 0, .03);
+                0 -10px 10px rgba(0, 0, 0, .03),
+                inset 0 -10px 10px rgba(0, 0, 0, .03),;
 
-    & .hand{
-        position: absolute;
-        bottom: 50%;
-        left: 50%;
-        width: 50%;
-        height: 4px;
-        transform-origin: left;
-        transform: rotate(-90deg);
-    }
-
-    
     &::before{
         content: '';
         position: absolute;
-        top: 50%;
-        left: 50%;
+        top: 50%; left: 50%;
         transform: translate(-50%, -50%);
         width: 15px;
         height: 15px;
-        border-radius: 50%;
         background-color: #fff;
-        box-shadow: 0 0 10px rgba(255, 255, 255, .5);
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(255, 255, 255, .4);
         z-index: 10;
+    }
+
+    & .hand{
+        position: absolute;
+        width: 50%;
+        height: 6px;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-2px);
+        transform-origin: left;
     }
 }
 .clock .hand.hour{
     width: 20%;
-    height: 5px;
-    background-color: #4d49b5;
-    border-radius: 0 6px 5px 0;
+    background-color: var(--comp);
 }
 .clock .hand.minute{
     width: 30%;
-    height: 2px;
-    background-color: #f3f3f3;
+    height: 4px;
+    background-color: var(--offLight);
 }
 .clock .hand.second{
+    position: relative;
     width: 50%;
     height: 1px;
 }
 .clock .hand.second::before{
     content: '';
     position: absolute;
-    background-color: #dd06a0;
-    height: 100%;
     width: 100%;
-    transform: translateX(-26%);
+    height: 100%;
+    background-color: var(--secondary);
+    transform: translateX(-20%);
 }
+
